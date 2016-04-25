@@ -2,7 +2,9 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: '<%= name %>',
+    modulePrefix: 'lesson-01-ember',
+    apiHost: `http://localhost:3000`,
+
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
