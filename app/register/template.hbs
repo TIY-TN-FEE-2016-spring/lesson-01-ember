@@ -1,0 +1,20 @@
+{{#simple-form onsubmit=(action createNewUser) as |formValues|}}
+  <p>
+    <label>Username</label>
+    {{input type="text" name="username" value=formValues.username}}
+  </p>
+
+  <p>
+    <label>Email</label>
+    {{input type="text" name="email" value=formValues.email}}
+  </p>
+
+  <p>
+    <label>Password</label>
+    {{input type="password" name="password" value=formValues.password}}
+  </p>
+
+  <p>
+    <button>Submit</button>
+  </p>
+{{/simple-form}}
