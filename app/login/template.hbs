@@ -1,1 +1,15 @@
-{{outlet}}
+{{#simple-form onsubmit=(action loginUser) as |formValues|}}
+  <p>
+    <label>Email</label>
+    {{input type="text" name="email" value=formValues.email}}
+  </p>
+
+  <p>
+    <label>Password</label>
+    {{input type="password" name="password" value=formValues.password}}
+  </p>
+
+  <p>
+    <button>Submit</button>
+  </p>
+{{/simple-form}}
