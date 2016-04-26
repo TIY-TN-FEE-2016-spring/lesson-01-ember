@@ -1,0 +1,7 @@
+<ol>
+  {{#each items as |item|}}
+    {{yield item}}
+  {{/each}}
+</ol>
+
+<button {{action addItem}}>{{fa-icon "plus-circle"}}</button>

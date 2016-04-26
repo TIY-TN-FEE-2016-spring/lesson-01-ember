@@ -11,7 +11,9 @@ Router.map(function() {
   this.route('login');
 
   this.route('dashboard', {path: '/'}, function() {
-    this.route('my-recipies');
+    this.route('my-recipes', function() {
+      this.route('new');
+    });
   });
 });
 

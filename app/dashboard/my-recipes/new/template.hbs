@@ -1,0 +1,20 @@
+{{#simple-form onsubmit=(action saveRecipe) as |newRecipe|}}
+  <p>
+    <label>Title</label>
+    {{input value=newRecipe.title}}
+  </p>
+
+  {{#add-array onadd=(action (mut newRecipe.steps)) as |step|}}
+    <li>{{input value=step.description}}</li>
+  {{/add-array}}
+
+  {{#add-array onadd=(action (mut newRecipe.ingredients)) as |ingredient|}}
+    <li>
+      {{input type="number" value=ingredient.amount placeholder="Amount"}}
+      {{input value=ingredient.unitOfMeasure placeholder="Unit"}}
+      {{input value=ingredient.description placeholder="Ingredient"}}
+    </li>
+  {{/add-array}}
+
+  <button>save</button>
+{{/simple-form}}
